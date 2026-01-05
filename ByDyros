@@ -1,0 +1,70 @@
+-- Loader con GUI Falsa Rayfield
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local FakeWindow = Rayfield:CreateWindow({
+   Name = "HadesHub",
+   LoadingTitle = "Cargando HadesHub...",
+   LoadingSubtitle = "by Dyros",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = "HadesHub",
+      FileName = "config"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink",
+      RememberJoins = true
+   },
+   KeySystem = false
+})
+
+local FakeTab = FakeWindow:CreateTab("Main", 4483362458)
+
+FakeTab:CreateLabel("cargando")
+FakeTab:CreateLabel("Cargando scripts...")
+
+FakeTab:CreateButton({
+   Name = "Cargando",
+   Callback = function()
+      Rayfield:Notify({
+         Title = "Error",
+         Content = "cargando",
+         Duration = 5
+      })
+   end,
+})
+
+FakeTab:CreateButton({
+   Name = "Cargando",
+   Callback = function()
+      Rayfield:Notify({
+         Title = "Cargando",
+         Content = "Cargando",
+         Duration = 5
+      })
+   end,
+})
+
+FakeTab:CreateLabel("Nada más aquí lol")
+
+-- final: después de 8 segundos, "destruye" la fake y carga la real en silencio
+spawn(function()
+    wait(8) -- Tiempo para que el skid explore la GUI fake y se frustre
+
+    Rayfield:Notify({
+        Title = "Error Crítico",
+        Content = "Versión obsoleta detectada. Auto-eliminando...",
+        Duration = 8
+    })
+
+    wait(4)
+
+    -- Destruye la fake GUI (opcional, pero aesthetic)
+    FakeWindow:Destroy()
+
+    wait(2)
+
+    -- CARGA LA VERDADERA EN SILENCIO 😈
+    loadstring(game:HttpGet("https://pastebin.com/raw/vRgBWk6c"))()
+end)
