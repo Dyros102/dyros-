@@ -1,4 +1,4 @@
--- Loader con GUI Falsa Rayfield
+-- Loader GUI Falsa Rayfield + Troll Anti-Skid 🖤 God tier fix
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
@@ -19,52 +19,55 @@ local FakeWindow = Rayfield:CreateWindow({
    KeySystem = false
 })
 
-local FakeTab = FakeWindow:CreateTab("Main", 4483362458)
+local FakeTab = FakeWindow:CreateTab("Principal", 4483362458)
 
-FakeTab:CreateLabel("cargando")
-FakeTab:CreateLabel("Cargando scripts...")
+FakeTab:CreateLabel("HadesHub - Versión Antigua")
+FakeTab:CreateLabel("Intentando cargar scripts...")
 
 FakeTab:CreateButton({
-   Name = "Cargando",
+   Name = "Cargar 99 Noches",
    Callback = function()
       Rayfield:Notify({
-         Title = "Error",
-         Content = "cargando",
-         Duration = 5
+         Title = "Error 404",
+         Content = "Script no encontrado. Intenta más tarde.",
+         Duration = 6
       })
    end,
 })
 
 FakeTab:CreateButton({
-   Name = "Cargando",
+   Name = "Cargar Muscle Legends",
    Callback = function()
       Rayfield:Notify({
-         Title = "Cargando",
-         Content = "Cargando",
-         Duration = 5
+         Title = "Outdated",
+         Content = "Esta función ya no está disponible 😭",
+         Duration = 6
       })
    end,
 })
 
-FakeTab:CreateLabel("Nada más aquí lol")
+FakeTab:CreateLabel("No hay más features aquí... lo siento skid 😂")
 
--- final: después de 8 segundos, "destruye" la fake y carga la real en silencio
+-- Troll + carga la verdadera sin destruir nada
 spawn(function()
-    wait(8) -- Tiempo para que el skid explore la GUI fake y se frustre
+    wait(10) -- Tiempo para que exploren la fake
 
     Rayfield:Notify({
         Title = "Error Crítico",
-        Content = "Versión obsoleta detectada. Auto-eliminando...",
+        Content = "Versión obsoleta detectada.\nActualizando automáticamente...",
         Duration = 8
     })
 
-    wait(4)
+    wait(5)
 
-    -- Destruye la fake GUI (opcional, pero aesthetic)
-    FakeWindow:Destroy()
+    Rayfield:Notify({
+        Title = "Actualización Completa",
+        Content = "Cargando nueva versión...",
+        Duration = 5
+    })
 
-    wait(2)
+    wait(3)
 
-    -- CARGA LA VERDADERA EN SILENCIO 😈
+    -- Carga la verdadera (tu loader troll que al final abre el hub real)
     loadstring(game:HttpGet("https://pastebin.com/raw/vRgBWk6c"))()
 end)
